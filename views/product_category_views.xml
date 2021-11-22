@@ -1,0 +1,14 @@
+<odoo>
+  <data>
+      <record id="category_lote_img" model="ir.ui.view">
+          <field name="name">category.lote.img</field>
+          <field name="model">product.category</field>
+          <field name="inherit_id" ref="product.product_category_form_view" />
+          <field name="arch" type="xml">
+              <xpath expr="//group[@name='first']" position="after">
+                  <field name="lote_img" widget="image"  />
+              </xpath>
+          </field>
+      </record>
+  </data>
+</odoo>

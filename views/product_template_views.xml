@@ -1,0 +1,22 @@
+<odoo>
+  <data>
+      <record id="product_lote_img" model="ir.ui.view">
+          <field name="name">product.lote.img</field>
+          <field name="model">product.template</field>
+          <field name="inherit_id" ref="product.product_template_only_form_view" />
+          <field name="arch" type="xml">
+              <xpath expr="//field[@name='uom_po_id']" position="after">
+                  <button string="Vender" type="object" name="set_gray"/>
+                  <field name="lote_img" widget="image"  />
+              </xpath>
+              <xpath expr="//field[@name='barcode']" position="after">
+                  <h3>Ubicación</h3>
+                  <field name="x0" />
+                  <field name="y0" />
+                  <field name="x1" />
+                  <field name="y1" />
+              </xpath>
+          </field>
+      </record>
+  </data>
+</odoo>
